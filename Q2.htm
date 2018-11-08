@@ -9,17 +9,14 @@
             margin-right: auto;
             margin-left: auto;
         }
-
         img {
             width: 70%;
         }
-
         h1 {
             font-family: Arial;
             font-weight: bold;
             text-align: center;
         }
-
         p {
             font-family: arial;
             font-size: 16pt;
@@ -27,11 +24,37 @@
             padding: 10px 100px 10px 100px;
             text-align: left;
         }
-
     </style>
 
     <script type="text/javascript">
-
+      function a()
+      {
+         if (document.getElementById("smile").click)
+            {document.getElementById("nice").style.fontSize = "2em";
+            document.getElementById("nice").style.fontSize = "Lucida Handwriting";
+            document.getElementById("nice").style.color = "red";
+            document.getElementById("nice").style.fontStyle = "bold";
+            document.getElementById("nice").style.backgroundColor = "yellow";
+            document.getElementById("bad").style.color = "black";
+            document.getElementById("bad").style.fontSize = "12pt";
+            document.getElementById("bad").style.backgroundColor = "white";
+            }
+            
+      }
+      function b()
+      {
+         if (document.getElementById("sad").click)
+            {document.getElementById("bad").style.fontSize = "2em";
+            document.getElementById("bad").style.color = "green";
+            document.getElementById("bad").style.fontStyle = "Arial";
+            document.getElementById("bad").style.fontStyle = "bold";
+            document.getElementById("bad").style.backgroundColor = "blue";
+            document.getElementById("nice").style.color = "black";
+            document.getElementById("nice").style.fontSize = "12pt";
+            document.getElementById("nice").style.backgroundColor = "white";
+            
+            }
+      }
     </script>
 </head>
 
@@ -47,15 +70,16 @@
         as necessary.
     </p>
 
-    <table>
+    <table >
         <tr>
-            <td><img src="smiley.jpg" alt="Smiling Face" title="Smile"></td>
-            <td>Web Tech Rocks!</td>
-        </tr>
+            <td><img id="smiley" src="smiley.jpg" alt="Smiling Face" title="Smile" onClick="a()"></td>
+            <td id="nice">Web Tech Rocks!</td>
+      </tr>
         <tr>
-            <td><img src="frown.jpg" alt="Frown Face" title="Sad"></td>
-            <td>Web Tech Sucks!</td>
+            <td><img id="sad" src="frown.jpg" alt="Frown Face" title="Sad" onClick="b()"></td>
+            <td id="bad">Web Tech Sucks!</td>
         </tr>
+        
 
     </table>
 </body>
